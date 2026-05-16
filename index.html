@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Sofi · Los Mejores Sándwiches</title>
+    <title>MiTienda · Lo mejor para la Gastronomía</title>
     <meta name="description" content="Pedí los mejores sándwiches a domicilio o retirá en el local.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥪</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -14,56 +14,44 @@
 
   <!-- HEADER -->
   <header class="header">
-    <div class="logo-area">
-      <img src="logo.jpg" alt="Sofi Logo" class="logo-img">
-      <div class="brand-text">
-        <h1>Sofi<span class="dot">.</span></h1>
-        <p class="tagline" data-i18n="tagline">Los Mejores Sándwiches · Envíos a domicilio</p>
-      </div>
-      <div class="header-actions">
-        <button id="langToggleBtn" class="lang-toggle" title="Switch language">
-          <span class="lang-opt" id="langES">ES</span>
-          <span class="lang-sep">|</span>
-          <span class="lang-opt" id="langEN">EN</span>
-        </button>
-        <button id="lastOrderBtn" class="btn-last-order" style="display:none;" data-i18n="btnUltimoPedido">📋 Último pedido</button>
-        <button id="allOrdersBtn"  class="btn-last-order" style="display:none;" data-i18n="btnMisPedidos">📜 Mis pedidos</button>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <div class="logo-area">
+        <img src="logo.png" alt="Mi Tienda Logo" class="logo-img">
+        <div class="brand-text">
+          <h1>MiCarta<span class="dot">.</span></h1>
+          <p class="tagline" data-i18n="tagline">Los Mejor para tu Negocio</p>
+        </div>
+        <div class="header-actions">
+          <button id="langToggleBtn" class="lang-toggle" title="Switch language">
+            <span class="lang-opt" id="langES">ES</span>
+            <span class="lang-sep">|</span>
+            <span class="lang-opt" id="langEN">EN</span>
+          </button>
+          <button id="lastOrderBtn" class="btn-last-order" style="display:none;" data-i18n="btnUltimoPedido">📋 Último pedido</button>
+          <button id="allOrdersBtn"  class="btn-last-order" style="display:none;" data-i18n="btnMisPedidos">📜 Mis pedidos</button>
+        </div>
       </div>
     </div>
   </header>
-  <!-- NUEVA BARRA INFORMATIVA DESPLAZABLE -->
-  <div class="info-bar-container">
-    <div class="info-bar-track" id="infoBarTrack">
-      <!-- Los textos se cargarán dinámicamente desde la columna 'notificacion' del CSV -->
-      <span>📞 3875048697</span>
-      <span>🕒 Horario 11 a 22hs</span>
-      <span>🚚 Envío</span>
-      <span>jjjjjjj</span>
-    </div>
-  </div>
 
-  <!-- SLIDER -->
-  <div class="slider-container" id="sliderContainer">
-    <div class="slider-track" id="sliderTrack">
-      <div class="slider-slide"><img src="slider1.jpeg" alt="Oferta 1" loading="lazy" onerror="this.src='https://placehold.co/1200x400/1e1b1a/f97316?text=Ofertas'"></div>
-      <div class="slider-slide"><img src="slider2.jpeg" alt="Oferta 2" loading="lazy" onerror="this.src='https://placehold.co/1200x400/1e1b1a/f97316?text=Novedades'"></div>
-      <div class="slider-slide"><img src="slider3.jpeg" alt="Oferta 3" loading="lazy" onerror="this.src='https://placehold.co/1200x400/1e1b1a/f97316?text=Especiales'"></div>
-    </div>
-    <button class="slider-btn prev" id="sliderPrev" aria-label="Anterior">&#8249;</button>
-    <button class="slider-btn next" id="sliderNext" aria-label="Siguiente">&#8250;</button>
-    <div class="slider-dots" id="sliderDots"></div>
+  <!-- BARRA INFORMATIVA -->
+  <div class="info-bar-container">
+    <div class="info-bar-track" id="infoBarTrack"></div>
   </div>
 
   <!-- TOOLBAR -->
   <div class="toolbar">
-    <div class="cart-summary" id="cartSummary">
+    <div class="cart-summary">
       🛒 <span id="cartCount">0</span> <span data-i18n="productosLabel">productos</span> · <strong id="cartTotal">$0</strong>
     </div>
     <button id="viewCartBtn" class="btn-outline" data-i18n="verCarrito">Ver carrito</button>
   </div>
 
   <!-- CATEGORÍAS -->
-  <div class="categories-filter" id="categoriesContainer"></div>
+  <div class="categories-wrapper">
+    <div class="categories-filter" id="categoriesContainer"></div>
+  </div>
 
   <!-- GRID PRODUCTOS -->
   <div id="productsContainer" class="products-grid">
@@ -75,10 +63,10 @@
     <div class="footer-grid">
       <div class="footer-col">
         <div class="footer-brand">
-          <img src="logo.jpg" alt="Sofi" class="footer-logo">
-          <span class="footer-name">Sofi<span class="dot">.</span></span>
+          <img src="logo.png" alt="MiCarta" class="footer-logo">
+          <span class="footer-name">MiCarta<span class="dot">.</span></span>
         </div>
-        <p class="footer-tagline" data-i18n="footerTagline">Los mejores sándwiches de la ciudad.</p>
+        <p class="footer-tagline" data-i18n="footerTagline">Los mejore para tu Negocio.</p>
         <p class="footer-phone">📞 3875048697</p>
       </div>
       <div class="footer-col">
@@ -95,12 +83,10 @@
             WhatsApp
           </a>
           <a href="#" target="_blank" rel="noopener" class="social-btn instagram">
-            <!-- Reemplazá href="#" con tu link de Instagram -->
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             Instagram
           </a>
           <a href="#" target="_blank" rel="noopener" class="social-btn facebook">
-            <!-- Reemplazá href="#" con tu link de Facebook -->
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             Facebook
           </a>
@@ -109,14 +95,12 @@
     </div>
     <div class="footer-bottom">
       <p>✨ <span data-i18n="footerSeguro">Pedidos 100% seguros · Recibilos en tu domicilio</span></p>
-      <p><small>Sofi · By Aquiles · 2026</small></p>
+      <p><small>MiCarta · By Andes-Tec · 2026</small></p>
     </div>
   </footer>
 </div>
 
-<!-- ====== MODALES ====== -->
-
-<!-- Modal: Detalle de producto -->
+<!-- MODALES -->
 <div id="productDetailModal" class="modal">
   <div class="modal-content product-detail-modal">
     <button class="close-modal" id="closeProductDetailBtn">&times;</button>
@@ -137,7 +121,6 @@
   </div>
 </div>
 
-<!-- Modal: Carrito -->
 <div id="cartModal" class="modal">
   <div class="modal-content cart-modal">
     <div class="modal-header">
@@ -152,186 +135,70 @@
   </div>
 </div>
 
-<!-- Modal: Checkout -->
 <div id="checkoutModal" class="modal">
-  <div class="modal-content checkout-modal">
+  <div class="modal-content checkout-modal dark-modal">
     <div class="modal-header">
       <h2>📋 <span data-i18n="datosPedido">Datos del pedido</span></h2>
       <button class="close-modal" id="closeCheckoutModalBtn">&times;</button>
     </div>
     <form id="checkoutForm" novalidate>
-
-      <!-- Sección 1: Datos del cliente -->
       <div class="form-section">
-        <div class="form-section-title">
-          <span class="form-section-icon">👤</span>
-          <span data-i18n="secDatosCliente">Datos del cliente</span>
-        </div>
+        <div class="form-section-title"><span>👤</span> <span data-i18n="secDatosCliente">Datos del cliente</span></div>
         <div class="form-row">
-          <div class="form-group">
-            <label for="customerName" data-i18n="labelNombre">Nombre completo *</label>
-            <input type="text" id="customerName" required autocomplete="name"
-              data-i18n-placeholder="placeholderNombre" placeholder="Ej: Ana González">
-            <span class="field-error" id="errorNombre"></span>
-          </div>
-          <div class="form-group">
-            <label for="customerPhone" data-i18n="labelTelefono">Teléfono *</label>
-            <input type="tel" id="customerPhone" required autocomplete="tel"
-              data-i18n-placeholder="placeholderTelefono" placeholder="11 2345 6789">
-            <span class="field-error" id="errorTelefono"></span>
-          </div>
+          <div class="form-group"><label data-i18n="labelNombre">Nombre completo *</label><input type="text" id="customerName" required><span class="field-error" id="errorNombre"></span></div>
+          <div class="form-group"><label data-i18n="labelTelefono">Teléfono *</label><input type="tel" id="customerPhone" required><span class="field-error" id="errorTelefono"></span></div>
         </div>
       </div>
-
-      <!-- Sección 2: Tipo de pedido -->
       <div class="form-section">
-        <div class="form-section-title">
-          <span class="form-section-icon">📍</span>
-          <span data-i18n="secTipoPedido">¿Cómo lo recibís?</span>
+        <div class="form-section-title"><span>📍</span> <span data-i18n="secTipoPedido">¿Cómo lo recibís?</span></div>
+        <div class="radio-card-group" id="tipoPedidoGroup">
+          <label class="radio-card"><input type="radio" name="tipoPedido" value="domicilio" checked><span class="radio-card-content"><span>🏠</span><span data-i18n="aDomicilio">A domicilio</span></span></label>
+          <label class="radio-card"><input type="radio" name="tipoPedido" value="local"><span class="radio-card-content"><span>🍽️</span><span data-i18n="enLocal">Consumo en local</span></span></label>
         </div>
-        <div class="form-group no-pad">
-          <div class="radio-card-group" id="tipoPedidoGroup">
-            <label class="radio-card">
-              <input type="radio" name="tipoPedido" value="domicilio" checked>
-              <span class="radio-card-content">
-                <span class="radio-icon">🏠</span>
-                <span data-i18n="aDomicilio">A domicilio</span>
-              </span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="tipoPedido" value="local">
-              <span class="radio-card-content">
-                <span class="radio-icon">🍽️</span>
-                <span data-i18n="enLocal">Consumo en local</span>
-              </span>
-            </label>
-          </div>
-        </div>
-        <div class="form-group" id="direccionGroup">
-          <label for="customerAddress" data-i18n="labelDireccion">Dirección de envío *</label>
-          <input type="text" id="customerAddress" autocomplete="street-address"
-            data-i18n-placeholder="placeholderDireccion" placeholder="Calle, número, ciudad">
-          <span class="field-error" id="errorDireccion"></span>
-        </div>
-        <div class="form-group" id="mesaGroup" style="display:none;">
-          <label for="mesaNumber" data-i18n="labelMesa">Número de mesa *</label>
-          <input type="text" id="mesaNumber"
-            data-i18n-placeholder="placeholderMesa" placeholder="Ej: Mesa 5">
-          <span class="field-error" id="errorMesa"></span>
-        </div>
+        <div class="form-group" id="direccionGroup"><label data-i18n="labelDireccion">Dirección de envío *</label><input type="text" id="customerAddress"><span class="field-error" id="errorDireccion"></span></div>
+        <div class="form-group" id="mesaGroup" style="display:none;"><label data-i18n="labelMesa">Número de mesa *</label><input type="text" id="mesaNumber"><span class="field-error" id="errorMesa"></span></div>
       </div>
-
-      <!-- Sección 3: Aderezos -->
       <div class="form-section" id="aderezosGroup">
-        <div class="form-section-title">
-          <span class="form-section-icon">🥫</span>
-          <span data-i18n="secAderezos">Aderezos adicionales</span>
-          <span class="form-section-badge" data-i18n="opcional">opcional</span>
-        </div>
-        <div class="form-group no-pad">
-          <div id="aderezosCheckboxes" class="checkboxes-group"></div>
-        </div>
+        <div class="form-section-title"><span>🥫</span> <span data-i18n="secAderezos">Aderezos adicionales</span> <span class="form-section-badge" data-i18n="opcional">opcional</span></div>
+        <div id="aderezosCheckboxes" class="chips-group"></div>
       </div>
-
-      <!-- Sección 4: Pago -->
       <div class="form-section">
-        <div class="form-section-title">
-          <span class="form-section-icon">💳</span>
-          <span data-i18n="secMetodoPago">Método de pago</span>
+        <div class="form-section-title"><span>💳</span> <span data-i18n="secMetodoPago">Método de pago</span></div>
+        <div class="radio-card-group" id="pagoGroup">
+          <label class="radio-card"><input type="radio" name="pago" value="efectivo" checked><span class="radio-card-content"><span>💵</span><span data-i18n="efectivo">Efectivo (contra entrega)</span></span></label>
+          <label class="radio-card"><input type="radio" name="pago" value="transferencia"><span class="radio-card-content"><span>🏦</span><span data-i18n="transferencia">Transferencia bancaria</span></span></label>
         </div>
-        <div class="form-group no-pad">
-          <div class="radio-card-group" id="pagoGroup">
-            <label class="radio-card">
-              <input type="radio" name="pago" value="efectivo" checked>
-              <span class="radio-card-content">
-                <span class="radio-icon">💵</span>
-                <span data-i18n="efectivo">Efectivo (contra entrega)</span>
-              </span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="pago" value="transferencia">
-              <span class="radio-card-content">
-                <span class="radio-icon">🏦</span>
-                <span data-i18n="transferencia">Transferencia bancaria</span>
-              </span>
-            </label>
-          </div>
-        </div>
-        <div id="aliasInfo" class="alias-info" style="display:none;">
-          <p>📲 <strong data-i18n="aliasParaTransferir">Alias para transferir:</strong>
-            <span id="aliasText">sandwich.sofi.mp</span>
-            <button type="button" id="copyAliasBtn" class="btn-copy" data-i18n="copiar">Copiar</button>
-          </p>
-        </div>
+        <div id="aliasInfo" class="alias-info" style="display:none;"><p>📲 <strong data-i18n="aliasParaTransferir">Alias para transferir:</strong> <span id="aliasText">sandwich.sofi.mp</span> <button type="button" id="copyAliasBtn" class="btn-copy" data-i18n="copiar">Copiar</button></p></div>
       </div>
-
-      <!-- Sección 5: Notas -->
       <div class="form-section">
-        <div class="form-section-title">
-          <span class="form-section-icon">📝</span>
-          <span data-i18n="secNotas">Notas / Instrucciones</span>
-          <span class="form-section-badge" data-i18n="opcional">opcional</span>
-        </div>
-        <div class="form-group">
-          <textarea id="orderNotes" rows="2"
-            data-i18n-placeholder="placeholderNotas"
-            placeholder="Ej: sin cebolla, timbre, etc."></textarea>
-        </div>
+        <div class="form-section-title"><span>📝</span> <span data-i18n="secNotas">Notas / Instrucciones</span> <span class="form-section-badge" data-i18n="opcional">opcional</span></div>
+        <textarea id="orderNotes" rows="2" placeholder="Ej: sin cebolla, timbre, etc."></textarea>
       </div>
-
-      <div class="form-submit-wrap">
-        <button type="submit" class="btn-primary btn-submit" id="submitOrderBtn">
-          ✅ <span data-i18n="confirmarPedido">Confirmar pedido y enviar</span>
-        </button>
-      </div>
+      <button type="submit" class="btn-primary btn-submit" id="submitOrderBtn">✅ <span data-i18n="confirmarPedido">Confirmar pedido y enviar</span></button>
     </form>
   </div>
 </div>
 
-<!-- Modal: Detalle pedido (historial) -->
 <div id="orderDetailModal" class="modal">
   <div class="modal-content order-detail-modal">
-    <div class="modal-header">
-      <h2>📄 <span data-i18n="detallePedido">Detalle del pedido</span></h2>
-      <button class="close-modal" id="closeOrderDetailBtn">&times;</button>
-    </div>
+    <div class="modal-header"><h2>📄 <span data-i18n="detallePedido">Detalle del pedido</span></h2><button class="close-modal" id="closeOrderDetailBtn">&times;</button></div>
     <div id="orderDetailContent" class="last-order-content"></div>
-    <div class="last-order-footer">
-      <button id="reorderFromDetailBtn" class="btn-primary" data-i18n="repetirPedido">🔄 Repetir este pedido</button>
-    </div>
+    <div class="last-order-footer"><button id="reorderFromDetailBtn" class="btn-primary" data-i18n="repetirPedido">🔄 Repetir este pedido</button></div>
   </div>
 </div>
 
-<!-- Modal: Historial -->
 <div id="allOrdersModal" class="modal">
   <div class="modal-content all-orders-modal">
-    <div class="modal-header">
-      <h2>📜 <span data-i18n="historialPedidos">Historial de pedidos</span></h2>
-      <button class="close-modal" id="closeAllOrdersBtn">&times;</button>
-    </div>
+    <div class="modal-header"><h2>📜 <span data-i18n="historialPedidos">Historial de pedidos</span></h2><button class="close-modal" id="closeAllOrdersBtn">&times;</button></div>
     <div id="ordersList" class="orders-list"></div>
   </div>
 </div>
 
-<!-- Toast -->
 <div id="toastMessage" class="toast"></div>
-
-<!-- Botón flotante -->
-<button id="floatingCartBtn" class="floating-cart-btn" aria-label="Ver carrito">
-  🛒 <span id="floatingCartCount">0</span>
-</button>
-
-<!-- Overlay de carga -->
+<button id="floatingCartBtn" class="floating-cart-btn" aria-label="Ver carrito">🛒 <span id="floatingCartCount">0</span></button>
 <div id="loadingOverlay" class="loading-overlay" style="display:none;">
   <div class="loading-content">
-    <div class="creative-spinner">
-      <span class="sandwich-emoji">🥪</span>
-      <div class="dot-wave">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-    </div>
+    <div class="creative-spinner"><span class="sandwich-emoji">🥪</span><div class="dot-wave"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
     <p class="loading-title" data-i18n="preparandoPedido">✨ ¡Preparando tu pedido! ✨</p>
     <p class="loading-message" data-i18n="redirigendoWhatsapp">En unos segundos te llevaremos a WhatsApp para confirmar...</p>
     <div class="loading-progress"><div class="progress-bar"></div></div>
