@@ -26,6 +26,10 @@
 body {
     font-family: 'Inter', system-ui, sans-serif;
     background-color: #f3f4f6;
+    background-image: url('fondo.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--text-dark);
     line-height: 1.5;
     padding: 1.5rem;
@@ -37,14 +41,14 @@ body {
     margin: 0 auto;
 }
 
-/* HEADER */
+/* HEADER - esquinas menos redondeadas y borde inferior plano */
 .header {
     position: relative;
-    background-image: url('fondo.png');
+    background-image: url('banner.webp');
     background-size: cover;
     background-position: center;
-    border-radius: 1.5rem;
-    margin-bottom: 1.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    margin-bottom: 0;
     overflow: hidden;
     box-shadow: var(--shadow-md);
 }
@@ -142,13 +146,14 @@ body {
     border-color: white;
 }
 
-/* INFO BAR */
+/* INFO BAR - casi pegado al banner, esquinas menos redondeadas */
 .info-bar-container {
     background: white;
-    border-radius: 60px;
+    border-radius: 0 0 0.75rem 0.75rem;
     margin-bottom: 1rem;
     padding: 0.5rem 1rem;
     border: 1px solid var(--border-light);
+    border-top: none;
     overflow: hidden;
     white-space: nowrap;
     box-shadow: var(--shadow-sm);
